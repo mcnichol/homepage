@@ -7,7 +7,7 @@
   "author": "McNichol <mcnichol.m@gmail.com>",
   "license": "MIT",
   "scripts": {
-    "dev": "webpack-dev-server --content-base=dist"
+    "dev": "webpack-dev-server --content-base=dist --host=0.0.0.0"
   },
   "devDependencies": {
     "babel-core": "^6.26.0",
