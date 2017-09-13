@@ -1,7 +1,6 @@
 #!/usr/bin/env bash
 
-#Use Yarn
-#RHEL/Fedora
+#Use Yarn\
 if [ "$(uname -s)" = "Darwin" ]; then
     echo "Mac Setup"
     brew install yarn --without-node
