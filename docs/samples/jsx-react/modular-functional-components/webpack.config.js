@@ -4,10 +4,8 @@ module.exports = {
     entry: __dirname + "/App.js",
     output: {
         path: __dirname + "/dist/assets",
-        filename: "bundle.js",
-        sourceMapFilename: "bundle.map"
+        filename: "bundle.js"
     },
-    devtool: 'source-map',
     module: {
         loaders: [
             {

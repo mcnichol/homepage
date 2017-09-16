@@ -7,8 +7,10 @@ const config = {
     entry: APP_DIR,
     output: {
         path: BUILD_DIR,
-        filename: 'js/bundle.js'
+        filename: 'js/bundle.js',
+        sourceMapFilename: "bundle.map"
     },
+    devtool: 'source-map',
     module: {
         loaders: [{
             test: /\.jsx$/,
