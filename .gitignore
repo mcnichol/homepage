@@ -3,3 +3,5 @@ node_modules/
 dist/
 ci/modules
 .gitmodules
+
+yarn-error.log
