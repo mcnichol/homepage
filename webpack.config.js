@@ -1,5 +1,5 @@
 const path = require('path');
-
+const webpack = require('webpack');
 const APP_DIR = path.resolve("dev/app.jsx");
 const BUILD_DIR = path.resolve("dist");
 
@@ -20,7 +20,14 @@ const config = {
                 "presets": ["es2015", "react"]
             }
         }]
-    }
+    },
+    plugins: [
+        new webpack.optimize.UglifyJsPlugin({
+            sourceMap: true,
+            warnings: false,
+            mangle: true
+        })
+    ]
 };
 
 module.exports = config;
