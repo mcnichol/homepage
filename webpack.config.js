@@ -1,16 +1,16 @@
 const path = require('path');
 const webpack = require('webpack');
-const APP_DIR = path.resolve("dev/app.jsx");
+const APP_PATH = path.resolve("dev/app.jsx");
 const BUILD_DIR = path.resolve("dist");
 
 const config = {
-    entry: APP_DIR,
+    entry: APP_PATH,
     output: {
         path: BUILD_DIR,
         filename: 'js/bundle.js',
         sourceMapFilename: "bundle.map"
     },
-    devtool: 'source-map',
+    devtool: '#source-map',
     module: {
         loaders: [{
             test: /\.jsx$/,
@@ -19,7 +19,21 @@ const config = {
             query: {
                 "presets": ["es2015", "react"]
             }
-        }]
+        }, {
+            test: /\.scss$/,
+            use: [{
+                loader: "style-loader" // creates style nodes from JS strings
+            }, {
+                loader: "css-loader" // translates CSS into CommonJS
+            }, {
+                loader: "sass-loader" // compiles Sass to CSS
+            }]
+        },
+            {
+                test: /\.(png|jpg)$/,
+                loader: 'url-loader?limit=8192'
+            }
+        ]
     },
     plugins: [
         new webpack.optimize.UglifyJsPlugin({
@@ -27,7 +41,10 @@ const config = {
             warnings: false,
             mangle: true
         })
-    ]
+    ],
+    resolve: {
+        extensions: ['.js', '.jsx']
+    }
 };
 
 module.exports = config;

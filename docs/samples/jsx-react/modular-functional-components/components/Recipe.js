@@ -1,12 +1,13 @@
 import IngredientsList from "./IngredientsList";
 import Instructions from "./Instructions";
 
-const Recipe = ({name, ingredients, steps}) => <section id="baked-salmon">
-    <section id={name.toLowerCase().replace(/ /g, '-')}>
-        <h1>{name}</h1>
-        <IngredientsList list={ingredients}/>
-        <Instructions title="Cooking Instructions" steps={steps}/>
-    </section>
-</section>;
+const Recipe = ({name, ingredients, steps}) =>
+    <section id="baked-salmon">
+        <section id={name.toLowerCase().replace(/ /g, '-')}>
+            <h1>{name}</h1>
+            <IngredientsList list={ingredients}/>
+            <Instructions title="Cooking Instructions" steps={steps}/>
+        </section>
+    </section>;
 
-module.exports = Recipe;
+export default Recipe;

@@ -7,4 +7,4 @@ const IngredientsList = ({list}) =>
         )}
     </ul>;
 
-module.exports = IngredientsList;
+export default IngredientsList;
