@@ -1,13 +1,13 @@
 .body {
+  display: flex;
+  flex: 1 0 auto;
 
   .container-pad {
-    display: inline-block;
-    width: 10%;
+    flex: 0 0 5em;
   }
 
   .body-container {
-    display: inline-block;
-    width: 80%;
+    flex: 1;
   }
 
   .alert {
@@ -20,5 +20,9 @@
     p {
       text-align: center;
     }
+  }
+
+  .article {
+    background-color: red;
   }
 }
