@@ -1,11 +1,12 @@
 import React from "react";
 import Alert from "./Alert";
-import Article from "./Article";
+import Articles from "./Articles";
+import articles from "../../data/articles"
 
-const BodyContainer = (props) =>
+const BodyContainer = () =>
     <div className="body-container">
         <Alert/>
-        <Article/>
+        <Articles articles={articles}/>
     </div>;
 
 export default BodyContainer;

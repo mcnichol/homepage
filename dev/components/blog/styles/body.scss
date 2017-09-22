@@ -21,8 +21,12 @@
       text-align: center;
     }
   }
-
-  .article {
-    background-color: red;
+  .articles {
+    padding: 1em 0em 1em 0em;
+    .article {
+      padding: 1em;
+      background-color: red;
+    }
   }
+
 }
