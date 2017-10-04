@@ -1,9 +1,11 @@
+@import "article";
+
 .body {
   display: flex;
   flex: 1 0 auto;
 
   .container-pad {
-    flex: 0 0 5em;
+    flex: 0 0 10em;
   }
 
   .body-container {
@@ -14,7 +16,7 @@
     border: dashed red thin;
     h1 {
       text-align: center;
-      padding: 10px;
+      padding: 1em;
     }
 
     p {
@@ -22,11 +24,6 @@
     }
   }
   .articles {
-    padding: 1em 0em 1em 0em;
-    .article {
-      padding: 1em;
-      background-color: red;
-    }
+    padding: 1em 0 1em 0;
   }
-
 }

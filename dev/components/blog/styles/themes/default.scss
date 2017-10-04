@@ -1,0 +1,17 @@
+$themed-font-family: "Droid Sans Mono", sans-serif;
+$themed-logo-path: "../assets/captain-murphy.jpg";
+$themed-letter-spacing: .08em;
+$themed-line-height: 1.7em;
+$themed-color: #496B81;
+
+body {
+  letter-spacing: $themed-letter-spacing;
+  line-height: $themed-line-height;
+  color: $themed-color;
+
+  a {
+    font-weight: 700;
+    color: #22b8eb;
+  }
+}
+

@@ -1,0 +1,55 @@
+%base-article {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+
+  .title {
+    text-transform: uppercase;
+    font-family: $themed-font-family;
+    color: #445D6E;
+  }
+
+  .detail-info {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+
+    div, p {
+      align-self: center;
+    }
+
+    .category {
+      flex: 1 auto auto;
+    }
+
+    .date {
+      flex: 1 auto auto;
+      font-style: italic;
+      font-size: .9em;
+    }
+
+    .social-media-share {
+      flex: 4;
+    }
+  }
+}
+
+.article-preview {
+  @extend %base-article;
+  padding: 1em;
+  .content {
+    a {
+      float: right;
+    }
+  }
+  .dividing-line {
+    border-top: .1em solid #cccccc;
+  }
+}
+
+.article {
+  @extend %base-article;
+}
+
+
+

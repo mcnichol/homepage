@@ -1,9 +1,9 @@
 import React from "react";
-import Article from "./Article"
+import ArticlePreview from "./ArticlePreview"
 
 const Articles = ({articles}) =>
     <div className="articles">
-        {articles.map((article, i) => <Article key={i} {...article} />)}
+        {articles.map((article, i) => <ArticlePreview key={i} {...article} />)}
     </div>;
 
 export default Articles;

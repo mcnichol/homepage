@@ -28,12 +28,13 @@ const config = {
             }, {
                 loader: "sass-loader" // compiles Sass to CSS
             }]
-        },
-            {
-                test: /\.(png|jpg)$/,
-                loader: 'url-loader?limit=8192'
-            }
-        ]
+        }, {
+            test: /\.(png|jpg)$/,
+            loader: 'url-loader?limit=8192'
+        }, {
+            test: /\.(eot|svg|ttf|woff|woff2)$/,
+            loader: 'file-loader?name=public/fonts/[name].[ext]'
+        }]
     },
     plugins: [
         new webpack.optimize.UglifyJsPlugin({

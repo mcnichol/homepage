@@ -1,12 +1,10 @@
 @import 'reset';
-@import 'blog';
-@import 'nav-bar';
-@import 'header';
-@import 'body';
+@import 'blog/app';
+@import 'font-awesome/scss/font-awesome';
 
 html {
   height: 100%;
-  & body {
+  body {
     height: 100%;
     #app {
       height: 100%;

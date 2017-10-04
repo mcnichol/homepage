@@ -1,0 +1,15 @@
+@import '../themes/default';
+@import 'nav-bar';
+@import 'header';
+@import 'body';
+@import 'footer';
+
+.blog {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+
+  p {
+    padding: .5em;
+  }
+}
