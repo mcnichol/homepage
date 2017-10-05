@@ -1,4 +1,4 @@
-#My Homepage
+# My Homepage
 
 ## Welcome
 This repo is what I use to keep fresh on frontend and get my face out there. Content-wise, it's an opportunity to share some thoughts from my experience and make connections with others. My domain [mcnichol.rocks](http://mcnichol.rocks) is the base for all of my *musings* as well as a quick shot across the bow of who I am and what fires me up! (In addition to that always important self-affirmation)

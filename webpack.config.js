@@ -1,6 +1,6 @@
 const path = require('path');
 const webpack = require('webpack');
-const APP_PATH = path.resolve("dev/app.jsx");
+const APP_PATH = path.resolve("dev/App.jsx");
 const BUILD_DIR = path.resolve("dist");
 
 const config = {
@@ -36,13 +36,6 @@ const config = {
             loader: 'file-loader?name=public/fonts/[name].[ext]'
         }]
     },
-    plugins: [
-        new webpack.optimize.UglifyJsPlugin({
-            sourceMap: true,
-            warnings: false,
-            mangle: true
-        })
-    ],
     resolve: {
         extensions: ['.js', '.jsx']
     }

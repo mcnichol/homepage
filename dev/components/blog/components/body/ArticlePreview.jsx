@@ -4,8 +4,8 @@ const extractFirst140Words = function (content) {
     return content.join(" ").split(" ").slice(0, 140).join(" ");
 };
 
-const getCount = function () {
-    return 0;
+const getShareCount = function () {
+    return -1;
 };
 
 const ArticlePreview = ({title, category, content, keywords, date}) =>
@@ -16,13 +16,34 @@ const ArticlePreview = ({title, category, content, keywords, date}) =>
             <p className="category">{category}</p>
             <p className="date">{date}</p>
             <div className="social-media-share">
-                <div className="fa fa-twitter">{getCount()}</div>
-                <div className="fa fa-linkedin">{getCount()}</div>
-                <div className="fa fa-reddit">{getCount()}</div>
-                <div className="fa fa-google-plus">{getCount()}</div>
-                <div className="fa fa-facebook">{getCount()}</div>
-                <div className="fa fa-y-combinator">{getCount()}</div>
-                <div className="fa fa-envelope">{getCount()}</div>
+                <div className="media-container">
+                    <span className="fa fa-twitter"/>
+                    <span className={"media-count"}>{getShareCount()}</span>
+                </div>
+                <div className="media-container">
+                    <span className="fa fa-linkedin"/>
+                    <span className="count">{getShareCount()}</span>
+                </div>
+                <div className="media-container">
+                    <span className="fa fa-reddit"/>
+                    <span className="count">{getShareCount()}</span>
+                </div>
+                <div className="media-container">
+                    <span className="fa fa-google-plus"/>
+                    <span className="count">{getShareCount()}</span>
+                </div>
+                <div className="media-container">
+                    <span className="fa fa-facebook"/>
+                    <span className="count">{getShareCount()}</span>
+                </div>
+                <div className="media-container">
+                    <span className="fa fa-y-combinator"/>
+                    <span className="count">{getShareCount()}</span>
+                </div>
+                <div className="media-container">
+                    <span className="fa fa-envelope"/>
+                    <span className="count">{getShareCount()}</span>
+                </div>
             </div>
         </div>
 
@@ -36,6 +57,7 @@ const ArticlePreview = ({title, category, content, keywords, date}) =>
         </div>
 
         <div className="dividing-line"/>
-    </div>;
+    </div>
+;
 
 export default ArticlePreview;

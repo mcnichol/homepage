@@ -14,7 +14,7 @@
     flex-direction: row;
     flex-wrap: wrap;
 
-    div, p {
+    &div, &p {
       align-self: center;
     }
 
@@ -29,7 +29,21 @@
     }
 
     .social-media-share {
-      flex: 4;
+      display: flex;
+      flex-direction: row;
+      padding: .5em;
+      .media-container {
+        margin: 0 .5em 0 0;
+        border: .07em solid #cccccc;
+        .fa {
+          width: 1.5em;
+          height: 1.5em;
+        }
+        .count{
+          width: 1.5em;
+          height: 1.5em;
+        }
+      }
     }
   }
 }
