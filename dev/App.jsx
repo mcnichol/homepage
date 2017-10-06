@@ -3,7 +3,6 @@ import ReactDOM from 'react-dom';
 
 import Blog from "./components/blog/Blog";
 import styles from "./components/blog/styles/styles.scss";
-
 import WebFont from 'webfontloader';
 
 WebFont.load({

@@ -1,4 +1,5 @@
 import React from "react";
+import {Link} from "react-router-dom"
 
 const extractFirst140Words = function (content) {
     return content.join(" ").split(" ").slice(0, 140).join(" ");
@@ -53,7 +54,7 @@ const ArticlePreview = ({title, category, content, keywords, date}) =>
 
         <div className="content">
             <p>{extractFirst140Words(content) + "..."}</p>
-            <a href="#">Continue Reading</a>
+            <Link to={'/articles/1'}>Continue Reading</Link>
         </div>
 
         <div className="dividing-line"/>
