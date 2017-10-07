@@ -1,5 +1,4 @@
 const path = require('path');
-const webpack = require('webpack');
 const APP_PATH = path.resolve("dev/App.jsx");
 const BUILD_DIR = path.resolve("dist");
 
@@ -8,7 +7,8 @@ const config = {
     output: {
         path: BUILD_DIR,
         filename: 'js/bundle.js',
-        sourceMapFilename: "bundle.map"
+        sourceMapFilename: "bundle.map",
+        publicPath: "/"
     },
     devtool: '#source-map',
     module: {
@@ -35,6 +35,9 @@ const config = {
             test: /\.(eot|svg|ttf|woff|woff2)$/,
             loader: 'file-loader?name=public/fonts/[name].[ext]'
         }]
+    },
+    devServer: {
+        historyApiFallback: true
     },
     resolve: {
         extensions: ['.js', '.jsx']

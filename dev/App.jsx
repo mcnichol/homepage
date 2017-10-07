@@ -1,9 +1,9 @@
 import React from 'react';
-import ReactDOM from 'react-dom';
-
-import Blog from "./components/blog/Blog";
 import styles from "./components/blog/styles/styles.scss";
 import WebFont from 'webfontloader';
+import {BrowserRouter as Router} from "react-router-dom";
+import Blog from "./components/blog/Blog";
+import * as ReactDOM from "react-dom";
 
 WebFont.load({
     google: {
@@ -14,11 +14,13 @@ WebFont.load({
 const preventImportFromBeingDeletedByIntellij = styles;
 
 class App extends React.Component {
+
     render() {
+
         return (
-            <div className="app">
+            <Router>
                 <Blog/>
-            </div>
+            </Router>
         );
     }
 }

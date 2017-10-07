@@ -1,5 +1,5 @@
 import React from "react";
-import {Link} from "react-router-dom"
+import {Link} from "react-router-dom";
 
 const extractFirst140Words = function (content) {
     return content.join(" ").split(" ").slice(0, 140).join(" ");
