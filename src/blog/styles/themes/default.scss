@@ -4,15 +4,24 @@ $themed-letter-spacing: .08em;
 $themed-line-height: 1.7em;
 $themed-color: #496B81;
 
+$themed-color-1: #445D6E;
+$themed-color-2: #F6AE2D;
+$themed-color-3: #007EA7;
+$themed-color-4: #496B81;
+$themed-color-5: #F26419;
+$themed-color-6: #22B8EB;
+
 body {
   letter-spacing: $themed-letter-spacing;
   line-height: $themed-line-height;
-  color: $themed-color;
+  color: $themed-color-4;
 
   a {
     font-weight: 700;
     text-decoration: none;
-    color: #22b8eb;
+    color: $themed-color-6;
+  }
+  h1 {
+    color: $themed-color-1;
   }
 }
-
