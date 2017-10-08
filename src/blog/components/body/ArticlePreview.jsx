@@ -1,5 +1,5 @@
 import React from "react";
-import {Link} from "react-router-dom";
+import CustomReactLink from "../common/CustomReactLink/CustomReactLink";
 
 const extractFirst140Words = function (content) {
     return content.join(" ").split(" ").slice(0, 140).join(" ");
@@ -54,7 +54,7 @@ const ArticlePreview = ({title, category, content, keywords, date}) =>
 
         <div className="content">
             <p>{extractFirst140Words(content) + "..."}</p>
-            <Link to={'/articles/1'}>Continue Reading</Link>
+            <CustomReactLink to={'/articles/1'}>Continue Reading</CustomReactLink>
         </div>
 
         <div className="dividing-line"/>

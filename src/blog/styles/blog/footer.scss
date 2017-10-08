@@ -1,14 +1,21 @@
-.footer{
-  background-color: #22b8eb;
-  padding: 2em 1em .5em 1em;
-  div{
+.footer {
+  background-color: $themed-color-6;
+  padding: 1em;
+  div {
     display: inline;
   }
-  ul{
+  ul {
     float: right;
-    li{
+    li {
       display: inline;
       padding: .5em;
+      a {
+        color: $themed-color-4;
+      }
     }
   }
+}
+
+.stand-out {
+  color: #ffffff;
 }
