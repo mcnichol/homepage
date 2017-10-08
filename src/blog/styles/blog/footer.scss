@@ -1,4 +1,14 @@
 .footer{
   background-color: #22b8eb;
   padding: 2em 1em .5em 1em;
+  div{
+    display: inline;
+  }
+  ul{
+    float: right;
+    li{
+      display: inline;
+      padding: .5em;
+    }
+  }
 }

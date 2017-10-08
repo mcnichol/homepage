@@ -1,8 +1,8 @@
 import React, {Component} from 'react';
 import './blog/styles/styles.scss';
 import WebFont from 'webfontloader';
-import {BrowserRouter as Router} from "react-router-dom";
 import Blog from "./blog/Blog"
+import {BrowserRouter} from "react-router-dom";
 
 WebFont.load({
     google: {
@@ -11,13 +11,13 @@ WebFont.load({
 });
 
 class App extends Component {
-  render() {
-      return (
-          <Router>
-              <Blog/>
-          </Router>
-      );
-  }
+    render() {
+        return (
+            <BrowserRouter>
+                <Blog/>
+            </BrowserRouter>
+        );
+    }
 }
 
 export default App;
