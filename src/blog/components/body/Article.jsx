@@ -12,7 +12,7 @@ export default class Article extends React.Component {
         return (
             <div className="article">
                 <ArticleHead id={id} title={title} date={date} category={category} keywords={keywords}/>
-                <div>
+                <div className="content">
                     {this.mapContent(content)}
                 </div>
             </div>
