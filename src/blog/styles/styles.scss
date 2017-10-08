@@ -2,15 +2,4 @@
 @import 'blog/app';
 @import 'font-awesome/scss/font-awesome';
 
-html {
-  height: 100%;
-  body {
-    height: 100%;
-    #root {
-      height: 100%;
-      .app {
-        height: 100%;
-      }
-    }
-  }
-}
+// To ensure footer sticks to bottom of page, all containers outside of component must be height:100%;
