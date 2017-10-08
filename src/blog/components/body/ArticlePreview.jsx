@@ -1,60 +1,19 @@
 import React from "react";
 import CustomReactLink from "../common/CustomReactLink/CustomReactLink";
+import ArticleHead from "./ArticleHead";
 
 const extractFirst140Words = function (content) {
     return content.join(" ").split(" ").slice(0, 140).join(" ");
 };
 
-const getShareCount = function () {
-    return -1;
-};
-
-const ArticlePreview = ({title, category, content, keywords, date}) =>
+const ArticlePreview = ({id, title, category, content, keywords, date}) =>
     <div className="article-preview">
-        <h1 className="title">{title}</h1>
+        <ArticleHead id={id} title={title} date={date} category={category} keywords={keywords}/>
 
-        <div className="detail-info">
-            <p className="category">{category}</p>
-            <p className="date">{date}</p>
-            <div className="social-media-share">
-                <div className="media-container">
-                    <span className="fa fa-twitter"/>
-                    <span className={"media-count"}>{getShareCount()}</span>
-                </div>
-                <div className="media-container">
-                    <span className="fa fa-linkedin"/>
-                    <span className="count">{getShareCount()}</span>
-                </div>
-                <div className="media-container">
-                    <span className="fa fa-reddit"/>
-                    <span className="count">{getShareCount()}</span>
-                </div>
-                <div className="media-container">
-                    <span className="fa fa-google-plus"/>
-                    <span className="count">{getShareCount()}</span>
-                </div>
-                <div className="media-container">
-                    <span className="fa fa-facebook"/>
-                    <span className="count">{getShareCount()}</span>
-                </div>
-                <div className="media-container">
-                    <span className="fa fa-y-combinator"/>
-                    <span className="count">{getShareCount()}</span>
-                </div>
-                <div className="media-container">
-                    <span className="fa fa-envelope"/>
-                    <span className="count">{getShareCount()}</span>
-                </div>
-            </div>
-        </div>
-
-        <div className="keywords">
-            {keywords.map((word, i) => <span key={i}>{word + " "}</span>)}
-        </div>
 
         <div className="content">
             <p>{extractFirst140Words(content) + "..."}</p>
-            <CustomReactLink to={'/articles/1'}>Continue Reading</CustomReactLink>
+            <CustomReactLink to={'/articles/' + id}>Continue Reading</CustomReactLink>
         </div>
 
         <div className="dividing-line"/>
