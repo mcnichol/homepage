@@ -1,0 +1,7 @@
+node_modules
+ci
+bin
+docs
+*.md
+.gitmodules
+.gitignore

@@ -1,0 +1,29 @@
+@import "article";
+
+.body {
+  display: flex;
+  flex: 1 0 auto;
+
+  .container-pad {
+    flex: 0 0 10em;
+  }
+
+  .body-container {
+    flex: 1;
+  }
+
+  .alert {
+    border: dashed red thin;
+    h1 {
+      text-align: center;
+      padding: 1em;
+    }
+
+    p {
+      text-align: center;
+    }
+  }
+  .articles {
+    padding: 1em 0 1em 0;
+  }
+}
