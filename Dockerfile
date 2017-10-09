@@ -1,12 +1,13 @@
-FROM node:8.4.0
+FROM node:8.6.0
 
-MAINTAINER Dad and August
+RUN yarn global add serve
+CMD serve -s build
+EXPOSE 5000
 
-RUN mkdir app
+COPY package.json package.json
+COPY yarn.lock yarn.lock
+RUN yarn 
 
-COPY . app
+COPY . .
 
-WORKDIR app
-
-RUN yarn install
-CMD ["yarn", "run", "dev"]
+RUN yarn build
