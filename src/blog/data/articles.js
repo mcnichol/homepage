@@ -17,7 +17,7 @@ const articles = [{
         "Ok </rant>",
         "Good news is I've updated the Dockerfile to point to the correct endpoint. Also dealt with a small issue around embedding the index.html launch page  inside the dist folder...because /dist get's generated when running `webpack` and the index.html file is not part of this step...we can see there is a problem. Either move it out of /dist (which I placed it there for a technical reason) or create a process to copy an html template as part of the webpack step....or just keep write it from scratch each time and tell myself it's for muscle memory...heyoh!"
     ],
-    "keywords": ["general", "leadership", "product engineering"],
+    "keywords": ["general", "blog"],
 }, {
     "id" : 0,
     "title": "Getting Started",
@@ -37,7 +37,7 @@ const articles = [{
         "This engineering will consist of many different realms, so I've created dedicated sections for each and I'll call them out with tags and keywords.",
         "In doing this, you should be able to quickly navigate to the areas that interest you most, or fork this away and customize it to fit your style."
     ],
-    "keywords": ["general", "leadership", "product engineering"],
+    "keywords": ["general", "blog"],
 }];
 
 module.exports = articles;

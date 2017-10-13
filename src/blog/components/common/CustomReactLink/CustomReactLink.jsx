@@ -5,7 +5,7 @@ export default class CustomReactLink extends React.Component {
 
     parseTo(to) {
         let parser = document.createElement('a');
-        parser.href = to;
+        parser.href = to === undefined ? "#" : to;
         return parser;
     }
 
