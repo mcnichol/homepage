@@ -1,13 +1,11 @@
 FROM node:8.6.0
 
 RUN yarn global add serve
-CMD serve -s build
-EXPOSE 5000
+CMD serve -s build -p 80
+EXPOSE 80
 
-COPY package.json package.json
-COPY yarn.lock yarn.lock
+RUN git clone https://github.com/mcnichol/homepage.git
+WORKDIR homepage
 RUN yarn 
-
-COPY . .
 
 RUN yarn build

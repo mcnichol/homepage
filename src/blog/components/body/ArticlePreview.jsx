@@ -10,14 +10,12 @@ const ArticlePreview = ({id, title, category, content, keywords, date}) =>
     <div className="article-preview">
         <ArticleHead id={id} title={title} date={date} category={category} keywords={keywords}/>
 
-
         <div className="content">
             <p>{extractFirst140Words(content) + "..."}</p>
             <CustomReactLink to={'/articles/' + id}>Continue Reading</CustomReactLink>
         </div>
 
         <div className="dividing-line"/>
-    </div>
-;
+    </div>;
 
 export default ArticlePreview;
