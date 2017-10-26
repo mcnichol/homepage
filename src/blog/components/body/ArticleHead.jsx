@@ -2,7 +2,11 @@ import React from "react";
 import CustomReactLink from "../common/CustomReactLink/CustomReactLink";
 
 const getShareCount = function () {
-    return -1;
+    return 0;
+};
+
+const handleClickForTwitter =  (id, title) => {
+    window.open("https://twitter.com/intent/tweet?text=Check out this article from McNichol.rocks!%0a" + title + " - mcnichol.rocks/articles/" + id, '_blank', 'location=yes,height=570,width=520,scrollbars=yes,status=yes');
 };
 
 const ArticleHead = ({id, title, category, keywords, date}) =>
@@ -14,7 +18,7 @@ const ArticleHead = ({id, title, category, keywords, date}) =>
             <p className="date">{date}</p>
             <div className="social-media-share">
                 <div className="media-container">
-                    <CustomReactLink to="#">
+                    <CustomReactLink to="#" onClick={() => handleClickForTwitter(id, title)} className="twitter-share-button">
                         <span className="fa fa-twitter"/>
                         <span className={"media-count"}>{getShareCount()}</span>
                     </CustomReactLink>
@@ -50,7 +54,7 @@ const ArticleHead = ({id, title, category, keywords, date}) =>
                     </CustomReactLink>
                 </div>
                 <div className="media-container">
-                    <CustomReactLink to="mailto:mcnichol.m@#gmail.com">
+                    <CustomReactLink to="mailto:mcnichol.m@gmail.com">
                         <span className="fa fa-envelope"/>
                         <span className="count">{getShareCount()}</span>
                     </CustomReactLink>
