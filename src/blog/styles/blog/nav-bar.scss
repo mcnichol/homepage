@@ -9,6 +9,10 @@
     background-image: url($themed-logo-path);
     height: 10em;
     width: 10em;
+
+    @media screen and (max-width: $break-small) {
+      display: none;
+    }
   }
 
   .nav-links {
@@ -19,8 +23,17 @@
     .nav-link {
       padding: 1em;
     }
+
     .active {
       text-decoration: underline;
     }
+
+    @media screen and (max-width: $break-small) {
+      float: none;
+    }
+  }
+
+  @media screen and(max-width: $break-small) {
+    text-align: center;
   }
 }

@@ -5,11 +5,14 @@
   flex: 1 0 auto;
 
   .container-pad {
-    flex: 0 0 10em;
+    flex: 1;
+    @media screen and (max-width: $break-small){
+      width: 1px;
+    }
   }
 
   .body-container {
-    flex: 1;
+    flex: 8;
   }
 
   .alert {

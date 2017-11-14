@@ -15,6 +15,9 @@ $light-text-color: $themed-color;
 $text-color: $themed-color-4;
 $dark-text-color: $themed-color-1;
 
+$break-small: 550px;
+$break-large: 1200px;
+
 body {
   letter-spacing: $themed-letter-spacing;
   line-height: $themed-line-height;
