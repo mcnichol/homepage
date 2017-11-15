@@ -1,15 +1,8 @@
 import React from "react";
 import CustomReactLink from "../common/CustomReactLink/CustomReactLink";
 
-function getCurrentYear() {
-    return new Date().getFullYear()
-}
-
 const Footer = (props) =>
     <div className="footer">
-        <div><span className="stand-out">mcnichol.rocks</span> and all content copyright © 1984-{getCurrentYear()},
-            Michael McNichol
-        </div>
         <ul className="contact-bar">
             <li>Contact</li>
             <li><CustomReactLink to="https://github.com/mcnichol"><span className="fa fa-github"/></CustomReactLink></li>

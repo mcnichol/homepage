@@ -7,7 +7,7 @@
   .container-pad {
     flex: 1;
     @media screen and (max-width: $break-small){
-      width: 1px;
+      display: none;
     }
   }
 
